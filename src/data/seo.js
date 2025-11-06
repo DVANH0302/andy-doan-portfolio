@@ -28,6 +28,13 @@ const SEO = [
 	},
 
 	{
+		page: "experience",
+		description:
+			"Professional work experience, roles, and accomplishments across software engineering positions.",
+		keywords: ["Work Experience", "Software Engineer", "Resume", "Career", "Portfolio"],
+	},
+
+	{
 		page: "contact",
 		description:
 			"Get in touch to collaborate on web development projects, internships, or open-source contributions. I'm always open to exciting opportunities.",

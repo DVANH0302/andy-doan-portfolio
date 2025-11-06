@@ -66,7 +66,7 @@
 }
 
 .page-footer {
-	position: block;
+	position: relative; /* fix invalid 'block' value */
 }
 
 .page-footer::before {
@@ -122,3 +122,49 @@
 	}
 }
 
+/* Smooth page fade-in on route change */
+.page-fade-in {
+	animation: pageFadeIn 1000ms ease-in-out;
+	will-change: opacity;
+}
+@keyframes pageFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* Skeleton overlay shown briefly during route changes */
+.page-skeleton-overlay {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(255,255,255,0.75);
+	backdrop-filter: blur(1px);
+	z-index: 9999;
+	pointer-events: none;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+.page-skeleton {
+	width: min(1000px, 92vw);
+	margin-top: 18vh;
+	padding: 0 12px;
+}
+.sk-row {
+	height: 14px;
+	border-radius: 8px;
+	margin: 12px 0;
+	background: linear-gradient(90deg, #f0f2f5 25%, #e6e9ef 37%, #f0f2f5 63%);
+	background-size: 400% 100%;
+	animation: skShimmer 900ms ease-in-out infinite;
+}
+.sk-title { height: 28px; width: 68%; border-radius: 10px; }
+.sk-subtitle { height: 18px; width: 80%; }
+.sk-row:nth-of-type(3) { width: 96%; }
+.sk-row:nth-of-type(4) { width: 88%; }
+@keyframes skShimmer { 0% { background-position: 100% 0; } 100% { background-position: 0 0; } }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.page-fade-in { animation: none; }
+	.sk-row { animation-duration: 2s; }
+}

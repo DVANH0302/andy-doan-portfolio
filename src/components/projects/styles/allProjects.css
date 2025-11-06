@@ -15,6 +15,15 @@
 	overflow: hidden;
 }
 
+/* Full-width details row injected after the selected row */
+.all-projects-details {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	/* Ensure it starts below the cards */
+	flex-basis: 100%;
+}
+
 @media (max-width: 600px) {
 	.all-projects-project {
 		width: calc(100% / 2);

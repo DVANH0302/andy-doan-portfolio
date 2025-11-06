@@ -42,3 +42,46 @@
 	text-align: right;
 	color: var(--tertiary-color);
 }
+
+/* Make the entire Work card clickable without changing its appearance */
+.work-card-link {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	cursor: pointer; /* show pointer across the whole card */
+}
+
+.work-card-link:focus-visible {
+	outline: 3px solid var(--link-color);
+	border-radius: 18px; /* roughly matches .card radius */
+}
+
+/* CTA area and button styling */
+.work-cta {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 8px;
+}
+
+.work-view-btn {
+	display: inline-block;
+	padding: 8px 14px;
+	border-radius: 8px;
+	background: var(--link-color);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.work-view-btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+	background-color: #0ea59a; /* slightly darker than link color */
+}
+
+.work-view-btn:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}

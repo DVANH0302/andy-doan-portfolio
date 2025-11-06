@@ -1,0 +1,113 @@
+/* Inline expanding project details styles - aligned with page, no box */
+.inline-details {
+	background: none;
+	border: none;
+	border-radius: 0;
+	padding: 10px 12px 6px 12px; /* align with card gutters */
+	box-shadow: none;
+	animation: inlineReveal 500ms ease; /* slower fade-in */
+}
+
+@keyframes inlineReveal {
+	from { opacity: 0; transform: translateY(-6px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.inline-details-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.inline-details-header-left { display: flex; align-items: center; gap: 12px; }
+.inline-details-logo { width: 44px; height: 44px; object-fit: contain; border-radius: 8px; background: #fff; border: 1px solid #e5e7eb; }
+.inline-details-title { font-size: 1.4rem; font-weight: 800; color: var(--primary-color, #27272a); margin: 0; letter-spacing: -0.2px; }
+
+/* Header-level link button */
+.inline-details-header-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 700;
+	background: var(--link-color, #14b8a6);
+	color: #fff;
+	transition: filter 0.15s ease;
+}
+.inline-details-header-link:hover { filter: brightness(0.95); }
+
+/* Blog/demo rich content area - no special background, just good spacing */
+.inline-details-blog { font-size: 1.02rem; color: var(--secondary-color, #65656d); line-height: 1.75; margin: 6px 0 12px 0; }
+.inline-details-blog h2, .inline-details-blog h3 { color: var(--primary-color, #27272a); margin: 1.2em 0 0.5em 0; font-weight: 800; }
+.inline-details-blog h2 { font-size: 1.25rem; }
+.inline-details-blog h3 { font-size: 1.12rem; }
+.inline-details-blog ul { margin: 0.6em 0 0.8em 1.2em; }
+.inline-details-blog li { margin: 0.2em 0; }
+.inline-details-blog img, .inline-details-blog video, .inline-details-blog iframe { display:block; margin: 12px auto; max-width:100%; border-radius:10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+
+/* Tables */
+.inline-details-blog table { width: 100%; border-collapse: collapse; margin: 10px 0 14px 0; }
+.inline-details-blog th, .inline-details-blog td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; font-size: 0.98rem; }
+.inline-details-blog thead th { background: #f9fafb; color: #111827; font-weight: 700; }
+.inline-details-blog tbody tr:nth-child(even) { background: #fafafa; }
+
+/* Code blocks */
+.inline-details-blog pre { background: #0b1220; color: #e5e7eb; padding: 12px 14px; border-radius: 8px; overflow: auto; font-size: 0.95rem; }
+.inline-details-blog code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.inline-details-description { font-size: 1rem; color: var(--secondary-color, #65656d); line-height: 1.7; margin: 4px 0 10px 0; }
+.inline-details-demo-link { display:inline-block; padding: 9px 16px; background: var(--link-color, #14b8a6); color:#fff; border-radius: 8px; text-decoration: none; font-weight: 700; letter-spacing: 0.2px; }
+.inline-details-demo-link:hover { filter: brightness(0.95); }
+
+/* Horizontal gallery */
+.inline-gallery {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	overflow-x: auto;
+	padding: 6px 2px 8px 2px;
+	scroll-snap-type: x mandatory;
+}
+.inline-gallery::-webkit-scrollbar { height: 8px; }
+.inline-gallery::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 6px; }
+.inline-gallery img {
+	height: 140px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+	cursor: zoom-in;
+	transition: transform 0.18s ease, box-shadow 0.18s ease;
+	scroll-snap-align: start;
+	user-select: none;
+}
+.inline-gallery img:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+/* Lightbox overlay */
+.inline-zoom-overlay {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: rgba(0,0,0,0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	animation: zoomOverlayFade 160ms ease;
+}
+@keyframes zoomOverlayFade { from { opacity: 0; } to { opacity: 1; } }
+.inline-zoom-image {
+	max-width: 92vw;
+	max-height: 92vh;
+	border-radius: 12px;
+	box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+	animation: zoomImageIn 200ms ease;
+}
+@keyframes zoomImageIn { from { transform: scale(0.98); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+@media (max-width: 700px) {
+	.inline-details { padding: 6px 4px; }
+	.inline-details-logo { width: 38px; height: 38px; }
+	.inline-details-title { font-size: 1.15rem; }
+	.inline-details-blog th, .inline-details-blog td { padding: 8px; }
+}
