@@ -2,36 +2,36 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"I'm a full-stack developer passionate about building scalable web applications using React, Spring Boot, and PostgreSQL. I enjoy creating efficient, maintainable, and user-friendly solutions.",
+		keywords: ["Anh Viet Doan", "Full-Stack Developer", "React", "Spring Boot", "PostgreSQL"],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Learn more about me, my journey as a full-stack developer, and the projects I've worked on using modern web technologies.",
+		keywords: ["Anh Viet Doan", "About", "Full-Stack Developer", "Portfolio"],
 	},
 
 	{
 		page: "articles",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"A collection of my thoughts, tutorials, and insights on full-stack development, microservices, and software engineering best practices.",
+		keywords: ["Articles", "Full-Stack Development", "React", "Spring Boot", "Microservices"],
 	},
 
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Showcase of my full-stack projects including web applications, open-source contributions, and deployed apps using React and Spring Boot.",
+		keywords: ["Projects", "React", "Spring Boot", "Full-Stack Applications", "Portfolio"],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Get in touch to collaborate on web development projects, internships, or open-source contributions. I'm always open to exciting opportunities.",
+		keywords: ["Contact", "Anh Viet Doan", "Full-Stack Developer", "Collaboration", "Portfolio"],
 	},
 ];
 
