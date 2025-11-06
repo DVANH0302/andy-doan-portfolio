@@ -2,15 +2,14 @@ import React from "react";
 
 function article_1() {
 	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
+		date: "6 Nov 2025",
+		title: "Microservices 101 - Saga Pattern",
 		description:
-			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
+			"Saga pattern helps microservices handle distributed transactions and recover from failures.",
 		keywords: [
-			"The Benefits of Cloud Computing",
-			"Tharindu",
-			"Tharindu N",
-			"Tharindu Nayanajith",
+			"Saga Pattern",
+			"Microservices",
+			"Distributed System",
 		],
 		style: `
 				.article-content {
@@ -24,6 +23,7 @@ function article_1() {
 					outline: 2px solid red;
 				}
 				`,
+		link: "https://medium.com/@doanvietanh03022003/microservices-101-saga-pattern-5adf5984fcf7?source=friends_link&sk=bc00ab2529055e435cade92952dc1bf1",
 		body: (
 			<React.Fragment>
 				<div className="article-content">
@@ -60,6 +60,7 @@ function article_2() {
 	};
 }
 
-const myArticles = [article_1, article_2];
+const myArticles = [article_1];
+// const myArticles = [article_1, article_2];
 
 export default myArticles;

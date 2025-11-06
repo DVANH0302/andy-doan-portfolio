@@ -1,30 +1,37 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Reactfolio by Andy",
+		name: "Viet Anh Doan",
+		email: "doanvietanh03022003@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
-		facebook: "https://facebook.com/",
+		github: "https://github.com/DVANH0302",
+		linkedin: "https://github.com/DVANH0302",
+		facebook: "https://www.facebook.com/dvanh0302/",
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Java Software Engineer",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I'm a passionate Java developer dedicated to building impactful and scalable solutions. This is a great place for you to learn more about my journey and how I contribute to real-world projects.",
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
-		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+		title: "Hi there 👋, I'm Andy",
+		description1:
+"Hi, I’m Anh Viet Doan, a full-stack developer who enjoys building web applications and software that people can use every day. I work with technologies like Java, React, and Spring Boot, and I like creating systems that are reliable and easy to maintain.",
+		description2:
+		"I’ve worked on projects ranging from e-commerce platforms to AI chatbots, focusing on making them work smoothly and efficiently. I enjoy solving problems and finding practical ways to improve how software works.",
+		description3:
+		"I’m currently studying for my Master of Computer Science at the University of Sydney. I’m passionate about learning new technologies and applying them to build useful and meaningful applications.",
+		description4:
+		"My Tech Stack:\n" +
+			" • Spring Boot\n" +
+			" • React.js\n" +
+			" • PostgreSQL\n" +
+			" • AWS\n"
 	},
 
 	articles: {
@@ -35,49 +42,32 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Astro Dreamers - Local Winner",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Built for the NASA Space Apps Challenge - A real-time air quality monitoring platform",
+			logo: "../spring.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://astrodreamers.netlify.app/",
 		},
 
 		{
-			title: "Project 2",
+			title: "MicroCart",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+				"A microservices-based e-commerce system demonstrating distributed transactions and event-driven architecture using the Saga pattern.\n",
+			logo: "../spring.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/DVANH0302/MicroCart",
 		},
 
 		{
-			title: "Project 3",
+			title: "Old Phone Deals",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+				"A full-stack web application for buying and selling used phones.\n",
+			logo: "../nodejs.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/DVANH0302/OldPhoneDeals",
 		},
 
-		{
-			title: "Project 4",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
 	],
 };
 
