@@ -8,7 +8,7 @@ const INFO = {
 
 	socials: {
 		github: "https://github.com/DVANH0302",
-		linkedin: "https://github.com/DVANH0302",
+		linkedin: "https://www.linkedin.com/in/dva0302/",
 		facebook: "https://www.facebook.com/dvanh0302/",
 		medium:"https://medium.com/@doanvietanh03022003",
 	},
