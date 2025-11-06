@@ -10,6 +10,7 @@ const INFO = {
 		github: "https://github.com/DVANH0302",
 		linkedin: "https://github.com/DVANH0302",
 		facebook: "https://www.facebook.com/dvanh0302/",
+		medium:"https://medium.com/@doanvietanh03022003",
 	},
 
 	homepage: {
@@ -21,7 +22,7 @@ const INFO = {
 	about: {
 		title: "Hi there 👋, I'm Andy",
 		description1:
-"Hi, I’m Anh Viet Doan, a full-stack developer who enjoys building web applications and software that people can use every day. I work with technologies like Java, React, and Spring Boot, and I like creating systems that are reliable and easy to maintain.",
+"Hi, I’m Viet Anh Doan, a full-stack developer who enjoys building web applications and software that people can use every day. I work with technologies like Java, React, and Spring Boot, and I like creating systems that are reliable and easy to maintain.",
 		description2:
 		"I’ve worked on projects ranging from e-commerce platforms to AI chatbots, focusing on making them work smoothly and efficiently. I enjoy solving problems and finding practical ways to improve how software works.",
 		description3:

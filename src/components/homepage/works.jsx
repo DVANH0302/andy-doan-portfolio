@@ -24,6 +24,7 @@ const Works = () => {
 								Full Stack Developer Intern
 							</div>
 							<div className="work-duration">Apr 2025 – Aug 2025</div>
+
 						</div>
 
 						<div className="work">
