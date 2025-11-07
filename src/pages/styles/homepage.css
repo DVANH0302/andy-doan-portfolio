@@ -203,3 +203,58 @@
         margin-bottom: 20px; /* Add spacing below the image */
     }
 }
+
+/* Ensure proper spacing between the image and social icons */
+.homepage-first-area {
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage-image-container {
+    margin-bottom: 30px; /* Add spacing below the image */
+}
+
+.homepage-socials {
+    margin-top: 20px; /* Add spacing above the social icons */
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Add spacing between social icons */
+}
+
+/* Further adjustments to ensure no overlap between the image and social icons */
+@media (max-width: 1024px) {
+    .homepage-first-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepage-image-container {
+        margin-bottom: 50px; /* Increase spacing below the image */
+    }
+
+    .homepage-socials {
+        margin-top: 30px; /* Increase spacing above the social icons */
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Ensure proper spacing between icons */
+    }
+}
+
+/* Restore the original layout for laptop view */
+@media (min-width: 1025px) {
+    .homepage-first-area {
+        flex-direction: row; /* Display image and text side by side */
+        align-items: center;
+    }
+
+    .homepage-image-container {
+        margin-bottom: 0; /* Remove extra spacing below the image */
+    }
+
+    .homepage-socials {
+        margin-top: 0; /* Remove extra spacing above the social icons */
+        justify-content: flex-start; /* Align icons to the left */
+        margin-left: 0; /* Reset any unintended right dragging */
+        gap: 15px; /* Maintain proper spacing between icons */
+    }
+}
