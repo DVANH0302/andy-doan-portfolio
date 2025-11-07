@@ -93,6 +93,28 @@
 	padding-top: 30px;
 }
 
+.homepage-download-resume {
+	/* ensure the resume button is visible and properly spaced */
+	display: block;
+	margin-top: 16px;
+}
+
+.homepage-download-resume a {
+	text-decoration: none;
+}
+
+.homepage-download-resume button {
+	display: inline-block;
+	padding: 10px 24px;
+	font-size: 1rem;
+	border-radius: 6px;
+	border: none;
+	background: #007bff;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 @media (max-width: 1024px) {
 	.homepage-first-area {
 		flex-direction: column;
@@ -147,4 +169,37 @@
 		margin-left: -25px;
 		margin-right: -25px;
 	}
+
+	/* make sure the resume button stays with the left side content and above the image */
+	.homepage-download-resume {
+		order: 4; /* appears after title/subtitle */
+		z-index: 2;
+	}
+
+	/* on smaller screens make button full-width for easier tapping */
+	@media (max-width: 480px) {
+		.homepage-download-resume button {
+			width: 100%;
+			padding: 12px 16px;
+			font-size: 1rem;
+		}
+
+
+
+	}
+}
+
+/* Adjustments for tablet view to prevent overlapping */
+@media (min-width: 386px) and (max-width: 1024px) {
+    .homepage-first-area {
+        flex-direction: column-reverse; /* Move the title below the image */
+    }
+
+    .homepage-title {
+        margin-top: 20px; /* Add spacing above the title */
+    }
+
+    .homepage-image-container {
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
 }

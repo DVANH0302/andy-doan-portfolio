@@ -3,12 +3,7 @@ import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram, faLinkedin, faFacebook, faMedium,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faFacebook, faMedium } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -121,7 +116,7 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src="/homepage.jpg"
 											alt="about"
 											className="homepage-image"
 										/>

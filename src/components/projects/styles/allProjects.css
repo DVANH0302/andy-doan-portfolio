@@ -24,8 +24,73 @@
 	flex-basis: 100%;
 }
 
+/* Mobile styles */
 @media (max-width: 600px) {
-	.all-projects-project {
-		width: calc(100% / 2);
+	.all-projects-container.mobile-scroll {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		gap: 16px;
+		padding: 20px;
+		margin: 0 -20px;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
+
+	.all-projects-container.mobile-scroll::-webkit-scrollbar {
+		display: none; /* Chrome/Safari */
+	}
+
+	.all-projects-container.mobile-scroll .all-projects-project {
+		flex: 0 0 85%;
+		width: 85%;
+		max-width: 400px;
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+		padding: 0;
+	}
+
+	.all-projects-details.mobile-details {
+		margin-top: 20px;
+		padding: 0 20px;
+	}
+
+	/* Dot indicators */
+	.scroll-indicators {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		padding: 20px 0;
+		margin-top: 10px;
+	}
+
+	.scroll-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #d1d5db;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.scroll-dot.active {
+		background-color: #3b82f6;
+		width: 24px;
+		border-radius: 4px;
+	}
+
+	.scroll-dot:hover {
+		background-color: #9ca3af;
+	}
+
+	.scroll-dot.active:hover {
+		background-color: #2563eb;
 	}
 }
