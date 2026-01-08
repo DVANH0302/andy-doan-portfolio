@@ -8,7 +8,7 @@ import Socials from "../components/about/socials";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-
+import SkillChart from "../components/about/SkillChart";
 import "./styles/about.css";
 
 const About = () => {
@@ -45,17 +45,50 @@ const About = () => {
 									{INFO.about.title}
 								</div>
 
-								<div className="subtitle about-subtitle">
+								<div className=" about-subtitle">
 									{INFO.about.description1}
 								</div>
-								<div className="subtitle about-subtitle">
-									{INFO.about.description2}
-								</div>
-								<div className="subtitle about-subtitle">
-									{INFO.about.description3}
-								</div>
-								<div className="subtitle about-subtitle">
+								<div className=" about-subtitle">
 									{INFO.about.description4}
+								</div>
+								<div
+									style={{
+										display: "flex",
+									}}
+								>
+									<SkillChart
+										data={INFO.about.skills.languange}
+										title="Language"
+									/>
+									<SkillChart
+										data={INFO.about.skills.frontend}
+										title="Frontend"
+									/>
+								</div>
+								<div
+									style={{
+										display: "flex",
+										justifyContent: "center",
+									}}
+								>
+									<SkillChart
+										data={INFO.about.skills.backend}
+										title="Backend"
+									/>
+								</div>
+								<div
+									style={{
+										display: "flex",
+									}}
+								>
+									<SkillChart
+										data={INFO.about.skills.database}
+										title="Database"
+									/>
+									<SkillChart
+										data={INFO.about.skills.devops}
+										title="Cloud & DevOps"
+									/>
 								</div>
 							</div>
 

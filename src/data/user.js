@@ -10,7 +10,7 @@ const INFO = {
 		github: "https://github.com/DVANH0302",
 		linkedin: "https://www.linkedin.com/in/dva0302/",
 		facebook: "https://www.facebook.com/dvanh0302/",
-		medium:"https://medium.com/@doanvietanh03022003",
+		medium: "https://medium.com/@doanvietanh03022003",
 	},
 
 	homepage: {
@@ -20,19 +20,52 @@ const INFO = {
 	},
 
 	about: {
+		skills: {
+			languange: [
+				{
+					skill: "JavaScript",
+					level: 80,
+					icon: "path/to/java-icon.png",
+				},
+
+				{ skill: "Python", level: 100 },
+				{ skill: "TypeScript", level: 70 },
+
+				{ skill: "Java", level: 100 },
+			],
+			backend: [
+				{ skill: "SpringBoot", level: 100 },
+				{ skill: "FastAPI", level: 70 },
+				{ skill: "ExpressJs", level: 80 },
+			],
+			frontend: [
+				{ skill: "HTML/CSS", level: 70 },
+
+				{ skill: "Tailwind", level: 80 },
+				{ skill: "React.js", level: 100 },
+			],
+			database: [
+				{ skill: "PostgresSQL", level: 100 },
+				{ skill: "MySQL", level: 100 },
+				{ skill: "MongoDB", level: 80 },
+				{ skill: "Redis", level: 80 },
+			],
+			devops: [
+				{ skill: "AWS", level: 90 },
+				{ skill: "Docker", level: 80 },
+				{ skill: "Git", level: 100 },
+			],
+		},
+
 		title: "Hi there 👋, I'm Andy",
 		description1:
-"Hi, I’m Viet Anh Doan, a software developer who enjoys building web applications and software that people can use every day. I work with technologies like Java, React, and Spring Boot, and I like creating systems that are reliable and easy to maintain.",
-		description2:
-		"I’ve worked on projects ranging from e-commerce platforms to AI chatbots, focusing on making them work smoothly and efficiently. I enjoy solving problems and finding practical ways to improve how software works.",
-		description3:
-		"I’m currently studying for my Master of Computer Science at the University of Sydney. I’m passionate about learning new technologies and applying them to build useful and meaningful applications.",
+			"I love turning coffee and code into web apps people actually use. Whether it’s React, Java, or Spring Boot, I’m all about building software that’s reliable, intuitive, and maybe even a little fun. If it works smoothly and makes life easier, I’m happy",
 		description4:
-		"My Tech Stack:\n" +
+			"My Tech Stack:\n" +
 			" • Spring Boot\n" +
 			" • React.js\n" +
 			" • PostgreSQL\n" +
-			" • AWS\n"
+			" • AWS\n",
 	},
 
 	articles: {
@@ -43,6 +76,16 @@ const INFO = {
 
 	// Added structured work experience for the Experience page
 	experience: [
+		{
+			role: "Fullstack Developer Intern",
+			company: "Digital Nexus AI",
+			location: "Remote",
+			period: "Dec 2025 – Now",
+			highlights: [
+				"Building a React-based chat interface for an AI agent, integrating frontend UI with backend APIs.",
+				"Collaborating in an Agile environment with iterative development and regular stand-ups.",
+			],
+		},
 		{
 			role: "Fullstack Developer Intern",
 			company: "Business Web Solution",
@@ -158,7 +201,7 @@ const INFO = {
 		<li>OpenAQ (ground sensors)</li>
 	</ul>
 
-			`
+			`,
 		},
 
 		{
@@ -231,7 +274,7 @@ const INFO = {
 	<p>The <strong>Saga Pattern</strong> enables microservices to maintain consistency through local transactions and compensations—avoiding the blocking and single‑point‑of‑failure issues of 2PC. In our system, <strong>Store</strong> orchestrates the flow between <strong>Bank</strong> and <strong>Delivery</strong> to stay reliable under partial failures.</p>
 	<p><em>Next step:</em> enforce idempotency for payment and delivery APIs to prevent duplicates.</p>
 	<p><a href="https://github.com/DVANH0302/MicroCart" target="_blank" rel="noopener noreferrer">GitHub — DVANH0302/MicroCart</a></p>
-			`
+			`,
 		},
 
 		{
@@ -282,9 +325,8 @@ const INFO = {
 	</ul>
 
 	<p><a href="https://github.com/DVANH0302/OldPhoneDeals" target="_blank" rel="noopener noreferrer">View source on GitHub</a></p>
-			`
+			`,
 		},
-
 	],
 };
 
