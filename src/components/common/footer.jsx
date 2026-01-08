@@ -13,7 +13,7 @@ const Footer = () => {
 							<Link to="/">Home</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/about">About</Link>
+							<Link to="/skill">Skill</Link>
 						</li>
 						<li className="footer-nav-link-item">
 							<Link to="/experience">Experience</Link>
@@ -29,8 +29,6 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-
-
 			</div>
 		</React.Fragment>
 	);

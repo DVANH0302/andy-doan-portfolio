@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ReactGA from "react-ga4";
 
 import Homepage from "./pages/homepage";
-import About from "./pages/about";
+import Skill from "./pages/skill";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import Notfound from "./pages/404";
@@ -23,12 +23,54 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/" element={<PageTransition><Homepage /></PageTransition>} />
-				<Route path="/about" element={<PageTransition><About /></PageTransition>} />
-				<Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
-				<Route path="/experience" element={<PageTransition><Experience /></PageTransition>} />
-				<Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-				<Route path="*" element={<PageTransition><Notfound /></PageTransition>} />
+				<Route
+					path="/"
+					element={
+						<PageTransition>
+							<Homepage />
+						</PageTransition>
+					}
+				/>
+				<Route
+					path="/skill"
+					element={
+						<PageTransition>
+							<Skill />
+						</PageTransition>
+					}
+				/>
+				<Route
+					path="/projects"
+					element={
+						<PageTransition>
+							<Projects />
+						</PageTransition>
+					}
+				/>
+				<Route
+					path="/experience"
+					element={
+						<PageTransition>
+							<Experience />
+						</PageTransition>
+					}
+				/>
+				<Route
+					path="/contact"
+					element={
+						<PageTransition>
+							<Contact />
+						</PageTransition>
+					}
+				/>
+				<Route
+					path="*"
+					element={
+						<PageTransition>
+							<Notfound />
+						</PageTransition>
+					}
+				/>
 			</Routes>
 		</div>
 	);
