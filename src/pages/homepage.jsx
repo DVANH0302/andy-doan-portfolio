@@ -3,7 +3,12 @@ import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faFacebook, faMedium } from "@fortawesome/free-brands-svg-icons";
+import {
+	faGithub,
+	faLinkedin,
+	faFacebook,
+	faMedium,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -93,19 +98,34 @@ const Homepage = () => {
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
 								</div>
+
+								<div className="subtitle homepage-subtitle">
+									{INFO.homepage.techstack}
+								</div>
 								{/* View Resume Button */}
-								<div className="homepage-download-resume" style={{ marginTop: '16px' }}>
-									<a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-										<button style={{
-											padding: '10px 24px',
-											fontSize: '1rem',
-											borderRadius: '6px',
-											border: 'none',
-											background: '#007bff',
-											color: 'white',
-											cursor: 'pointer',
-											boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
-										}}>
+								<div
+									className="homepage-download-resume"
+									style={{ marginTop: "16px" }}
+								>
+									<a
+										href="/resume.pdf"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ textDecoration: "none" }}
+									>
+										<button
+											style={{
+												padding: "10px 24px",
+												fontSize: "1rem",
+												borderRadius: "6px",
+												border: "none",
+												background: "#007bff",
+												color: "white",
+												cursor: "pointer",
+												boxShadow:
+													"0 2px 8px rgba(0,0,0,0.08)",
+											}}
+										>
 											View Resume
 										</button>
 									</a>
@@ -126,7 +146,6 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-socials">
-
 							<a
 								href={INFO.socials.github}
 								target="_blank"

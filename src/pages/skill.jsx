@@ -46,11 +46,9 @@ const Skill = () => {
 								</div>
 
 								<div className=" about-subtitle">
-									{INFO.about.description1}
+									{INFO.about.description}
 								</div>
-								<div className=" about-subtitle">
-									{INFO.about.description4}
-								</div>
+
 								<div
 									style={{
 										display: "flex",

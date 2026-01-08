@@ -17,6 +17,12 @@ const INFO = {
 		title: "Java Software Engineer",
 		description:
 			"I'm a passionate Java developer dedicated to building impactful and scalable solutions. This is a great place for you to learn more about my journey and how I contribute to real-world projects.",
+		techstack:
+			"My Tech Stack:\n" +
+			" • Spring Boot\n" +
+			" • React.js\n" +
+			" • PostgreSQL\n" +
+			" • AWS\n",
 	},
 
 	about: {
@@ -58,14 +64,8 @@ const INFO = {
 		},
 
 		title: "Hi there 👋, I'm Andy",
-		description1:
+		description:
 			"I love turning coffee and code into web apps people actually use. Whether it’s React, Java, or Spring Boot, I’m all about building software that’s reliable, intuitive, and maybe even a little fun. If it works smoothly and makes life easier, I’m happy",
-		description4:
-			"My Tech Stack:\n" +
-			" • Spring Boot\n" +
-			" • React.js\n" +
-			" • PostgreSQL\n" +
-			" • AWS\n",
 	},
 
 	articles: {
@@ -93,7 +93,7 @@ const INFO = {
 			period: "Apr 2025 – Aug 2025",
 			highlights: [
 				"Built and deployed 3 full-stack applications using React, Spring Boot, and PostgreSQL.",
-				"Contributed to Agile sprints and continuous improvement, reducing project turnaround time by 20%.",
+				"Contributed in Agile sprints and process improvements, helping deliver projects more efficiently.",
 			],
 		},
 		{
@@ -102,10 +102,10 @@ const INFO = {
 			location: "Vietnam",
 			period: "Jul 2024 – Feb 2025",
 			highlights: [
-				"Built a RAG AI chatbot (AWS ECS, OpenMetadata) serving 500+ staff with ~90% accuracy, reducing query time by 60%.",
-				"Automated metadata generation for 1,000+ data assets using AWS Bedrock foundation models with ~90% accuracy.",
-				"Deployed AWS Glue pipelines processing 50GB+ daily banking data to keep the chatbot knowledge base updated.",
-				"Created a cost monitoring dashboard tracking $10K+ monthly AWS foundation model usage across 10+ teams.",
+				"Built RAG AI chatbot serving 200+ staff with approximately 90% accuracy and 5s response time.",
+				"Generated AI descriptive metadata for 5K+ tables in the OpenMetadata catalog with approximately 90% accuracy.",
+				"Built AWS Glue pipelines to scan 5K+ tables weekly in Amazon S3, keeping the chatbot knowledge base up-to-date.",
+				"Built cost monitoring dashboard tracking $10K+ monthly AWS foundation model usage across 10+ teams.",
 			],
 		},
 	],
