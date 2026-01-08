@@ -57,10 +57,12 @@ const Skill = () => {
 									<SkillChart
 										data={INFO.about.skills.languange}
 										title="Language"
+										color="#27296d"
 									/>
 									<SkillChart
 										data={INFO.about.skills.frontend}
 										title="Frontend"
+										color="#cf7979"
 									/>
 								</div>
 								<div
@@ -72,6 +74,7 @@ const Skill = () => {
 									<SkillChart
 										data={INFO.about.skills.backend}
 										title="Backend"
+										color="#f6e198"
 									/>
 								</div>
 								<div
@@ -82,10 +85,12 @@ const Skill = () => {
 									<SkillChart
 										data={INFO.about.skills.database}
 										title="Database"
+										color="#ecffa3"
 									/>
 									<SkillChart
 										data={INFO.about.skills.devops}
 										title="Cloud & DevOps"
+										color="#ff6f3c"
 									/>
 								</div>
 							</div>

@@ -25,9 +25,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandMysql } from "react-icons/tb";
 import { DiRedis } from "react-icons/di";
 
-import ReactDOMServer from "react-dom/server";
-
-const SkillChart = ({ data, title }) => {
+const SkillChart = ({ data, title, color }) => {
 	// Map skill names to icons
 	const iconMap = {
 		Java: FaJava,
@@ -113,9 +111,9 @@ const SkillChart = ({ data, title }) => {
 					<Radar
 						name="My Skills"
 						dataKey="level"
-						stroke="#f5e642"
-						fill="#f5e642"
-						fillOpacity={0.6}
+						stroke={color}
+						fill={color}
+						fillOpacity={0.8}
 					/>
 				</RadarChart>
 			</ResponsiveContainer>
