@@ -30,34 +30,33 @@ const INFO = {
 			languange: [
 				{
 					skill: "JavaScript",
-					level: 80,
-					icon: "path/to/java-icon.png",
+					level: 70,
 				},
 
-				{ skill: "Python", level: 100 },
-				{ skill: "TypeScript", level: 70 },
+				{ skill: "Python", level: 95 },
+				{ skill: "TypeScript", level: 60 },
 
-				{ skill: "Java", level: 100 },
+				{ skill: "Java", level: 90 },
 			],
 			backend: [
-				{ skill: "SpringBoot", level: 100 },
-				{ skill: "FastAPI", level: 70 },
+				{ skill: "SpringBoot", level: 95 },
+				{ skill: "FastAPI", level: 60 },
 				{ skill: "ExpressJs", level: 80 },
 			],
 			frontend: [
-				{ skill: "HTML/CSS", level: 70 },
+				{ skill: "HTML/CSS", level: 90 },
 
-				{ skill: "Tailwind", level: 80 },
-				{ skill: "React.js", level: 100 },
+				{ skill: "Tailwind", level: 50 },
+				{ skill: "React.js", level: 70 },
 			],
 			database: [
-				{ skill: "PostgresSQL", level: 100 },
-				{ skill: "MySQL", level: 100 },
+				{ skill: "PostgresSQL", level: 90 },
+				{ skill: "MySQL", level: 90 },
 				{ skill: "MongoDB", level: 80 },
-				{ skill: "Redis", level: 80 },
+				{ skill: "Redis", level: 70 },
 			],
 			devops: [
-				{ skill: "AWS", level: 90 },
+				{ skill: "AWS", level: 80 },
 				{ skill: "Docker", level: 80 },
 				{ skill: "Git", level: 100 },
 			],
