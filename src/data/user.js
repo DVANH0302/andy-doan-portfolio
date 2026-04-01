@@ -76,35 +76,30 @@ const INFO = {
 	// Added structured work experience for the Experience page
 	experience: [
 		{
-			role: "Fullstack Developer Intern",
+			role: "Software Engineering Intern",
 			company: "Digital Nexus AI",
-			location: "Remote",
-			period: "Dec 2025 – Now",
+			location: "Melbourne, Australia (Remote)",
+			period: "Jan 2026 – Now",
 			highlights: [
-				"Building a React-based chat interface for an AI agent, integrating frontend UI with backend APIs.",
-				"Collaborating in an Agile environment with iterative development and regular stand-ups.",
+				"Built a unified API gateway centralizing multi-provider GenAI services (OpenAI, Anthropic, Gemini) across chat, streaming, and prompt workflows for 20+ internal use cases, reducing integration effort by 80%.",
+				"Engineered a document similarity pipeline using fingerprint-based matching with third-party API checks, reducing review time by 70%",
+				"Wrote unit tests and maintained technical documentation across all developed features, ensuring system reliability andsupporting developer onboarding.",
+				"Technologies: Python, TypeScript, FastAPI, Express.js, PostgreSQL, Pytest, Jest",
 			],
 		},
+
 		{
-			role: "Fullstack Developer Intern",
-			company: "Business Web Solution",
-			location: "Remote",
-			period: "Apr 2025 – Aug 2025",
-			highlights: [
-				"Built and deployed 3 full-stack applications using React, Spring Boot, and PostgreSQL.",
-				"Contributed in Agile sprints and process improvements, helping deliver projects more efficiently.",
-			],
-		},
-		{
-			role: "Solution Developer",
-			company: "Vietnam Prosperity Joint Stock Commercial Bank (VPBank)",
+			role: "Software Engineer",
+			company: "VPBank",
 			location: "Vietnam",
 			period: "Jul 2024 – Feb 2025",
 			highlights: [
-				"Built RAG AI chatbot serving 200+ staff with approximately 90% accuracy and 5s response time.",
-				"Generated AI descriptive metadata for 5K+ tables in the OpenMetadata catalog with approximately 90% accuracy.",
-				"Built AWS Glue pipelines to scan 5K+ tables weekly in Amazon S3, keeping the chatbot knowledge base up-to-date.",
-				"Built cost monitoring dashboard tracking $10K+ monthly AWS foundation model usage across 10+ teams.",
+				"Designed an AWS Glue pipeline to scan 5K+ tables on a weekly basis, storing structured data into an S3 bucket for downstream processing",
+				"Built an automated metadata generation service using AWS Glue & Bedrock to read from a S3 bucket, generate descriptions, and catalog 5K+ tables in OpenMetadata, achieving ∼90% accuracy.",
+				"Deployed and integrated a retrieval-augmented chatbot into OpenMetadata UI using ECS, serving 200+ staff, achieving ∼90% query accuracy and reducing response time by ∼30% by tagging table fields to enable faster retrieval.",
+				"Built a cost monitoring service tracking $10K+/month in AWS foundation model usage across 20+ teams, offloading AI Hub token usage requests to async BullMQ workers with retries and DLQ, cutting ∼70% response time",
+				"Developed 10+ production ETL pipelines using IBM DataStage, processing hundreds of thousands to millions of records weekly across business units, supporting downstream analytics and reporting",
+				"Technologies: Python, FastAPI, PostgreSQL, BullMQ, IBM DataStage, AWS (S3, Glue, Bedrock, ECS, CloudWatch)",
 			],
 		},
 	],
