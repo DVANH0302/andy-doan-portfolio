@@ -35,22 +35,6 @@ const Works = () => {
 									Dec 2025 – Now
 								</div>
 							</div>
-							<div className="work">
-								<img
-									src="/bws.png"
-									alt="BWS"
-									className="work-image"
-								/>
-								<div className="work-title">
-									Business Web Solutions
-								</div>
-								<div className="work-subtitle">
-									Full Stack Developer Intern
-								</div>
-								<div className="work-duration">
-									Apr 2025 – Aug 2025
-								</div>
-							</div>
 
 							<div className="work">
 								<img
