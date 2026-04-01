@@ -29,7 +29,7 @@ const Works = () => {
 									Digital Nexus AI
 								</div>
 								<div className="work-subtitle">
-									Full Stack Developer Intern
+									Software Engineering Intern
 								</div>
 								<div className="work-duration">
 									Dec 2025 – Now
