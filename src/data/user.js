@@ -14,9 +14,9 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Java Software Engineer",
+		title: "Andy Doan | SWE",
 		description:
-			"I'm a passionate Java developer dedicated to building impactful and scalable solutions. This is a great place for you to learn more about my journey and how I contribute to real-world projects.",
+			"Hi there! I'm a software engineer who likes building things people actually use, mostly in Java and Spring Boot. Lately, I'm also learning Go, which is teaching me a lot about what's really going on under the hood.",
 		techstack:
 			"My Tech Stack:\n" +
 			" • Spring Boot\n" +
@@ -37,6 +37,7 @@ const INFO = {
 				{ skill: "TypeScript", level: 60 },
 
 				{ skill: "Java", level: 90 },
+				{ skill: "Go", level: 90}
 			],
 			backend: [
 				{ skill: "SpringBoot", level: 95 },
@@ -60,9 +61,18 @@ const INFO = {
 				{ skill: "Docker", level: 80 },
 				{ skill: "Git", level: 100 },
 			],
+			corecs: [
+				{ skill: "DSA", level: 90 },
+				{ skill: "OOP", level: 90 },
+				{ skill: "Concurrency", level: 90 },
+				{ skill: "OS", level: 65 },
+				{ skill: "Network", level: 70 },
+				{ skill: "System Design", level: 60 },
+				{ skill: "Security", level: 70 },
+			],
 		},
 
-		title: "Hi there 👋, I'm Andy",
+		title: "My Toolkit",
 		description:
 			"I love turning coffee and code into web apps people actually use. Whether it’s React, Java, or Spring Boot, I’m all about building software that’s reliable, intuitive, and maybe even a little fun. If it works smoothly and makes life easier, I’m happy",
 	},
@@ -79,13 +89,15 @@ const INFO = {
 			role: "Software Engineering Intern",
 			company: "Digital Nexus AI",
 			location: "Melbourne, Australia (Remote)",
-			period: "Jan 2026 – Now",
+			period: "Dec 2025 – Apr 2026",
+			summary:
+				"Built reusable modules and live services powering internal AI features.",
 			highlights: [
-				"Built a unified API gateway centralizing multi-provider GenAI services (OpenAI, Anthropic, Gemini) across chat, streaming, and prompt workflows for 20+ internal use cases, reducing integration effort by 80%.",
-				"Engineered a document similarity pipeline using fingerprint-based matching with third-party API checks, reducing review time by 70%",
-				"Wrote unit tests and maintained technical documentation across all developed features, ensuring system reliability andsupporting developer onboarding.",
-				"Technologies: Python, TypeScript, FastAPI, Express.js, PostgreSQL, Pytest, Jest",
+				"Built a shared LLM module wrapping OpenAI, Anthropic, and Gemini behind one interface, reducing setup from roughly 100 lines to about 10 across 20+ internal use cases.",
+				"Built a document similarity pipeline using Winnowing fingerprinting to flag near-duplicate submissions and support AI plagiarism detection.",
+				"Built a real-time WebSocket service for 500+ concurrent users that flagged inactive students and alerted tutors during live tutorials.",
 			],
+			stack: ["Python", "TypeScript", "FastAPI", "Express.js", "PostgreSQL"],
 		},
 
 		{
@@ -93,26 +105,34 @@ const INFO = {
 			company: "VPBank",
 			location: "Vietnam",
 			period: "Jul 2024 – Feb 2025",
+			summary:
+				"Built data and chatbot workflows that made bank information easier to find.",
 			highlights: [
-				"Designed an AWS Glue pipeline to scan 5K+ tables on a weekly basis, storing structured data into an S3 bucket for downstream processing",
-				"Built an automated metadata generation service using AWS Glue & Bedrock to read from a S3 bucket, generate descriptions, and catalog 5K+ tables in OpenMetadata, achieving ∼90% accuracy.",
-				"Deployed and integrated a retrieval-augmented chatbot into OpenMetadata UI using ECS, serving 200+ staff, achieving ∼90% query accuracy and reducing response time by ∼30% by tagging table fields to enable faster retrieval.",
-				"Built a cost monitoring service tracking $10K+/month in AWS foundation model usage across 20+ teams, offloading AI Hub token usage requests to async BullMQ workers with retries and DLQ, cutting ∼70% response time",
-				"Developed 10+ production ETL pipelines using IBM DataStage, processing hundreds of thousands to millions of records weekly across business units, supporting downstream analytics and reporting",
-				"Technologies: Python, FastAPI, PostgreSQL, BullMQ, IBM DataStage, AWS (S3, Glue, Bedrock, ECS, CloudWatch)",
+				"Designed a serverless metadata ingestion pipeline with AWS Glue to scan 5K+ tables weekly and land structured schema data in S3.",
+				"Built an automated metadata generation service with AWS Glue and Bedrock to catalog 5K+ tables in OpenMetadata at about 90% accuracy.",
+				"Deployed a production chatbot on Amazon ECS for 200+ staff, improving answer accuracy to about 90% and response time by about 30%.",
+				"Engineered a cost monitoring service for $10K+/month in model usage and 10+ production ETL pipelines using IBM DataStage.",
 			],
+			stack: ["Python", "FastAPI", "AWS", "PostgreSQL", "Redis"],
 		},
 	],
 
 	// Added education timeline entries
 	education: [
 		{
-			role: "Master of Computer Science | Advanced Entry",
+			role: "Master of Computer Science | WAM: 82.3",
 			company: "University of Sydney",
 			location: "Sydney, Australia",
 			period: "Feb 2025 – Nov 2026",
-			highlights: [
-				"Coursework: Enterprise Scale Software Architecture, Data Structures and Algorithms, Design Patterns",
+			transcript: "/AndyDoan_Master_Transcript.pdf",
+			// Key coursework relevant to software engineering, CS & math (mark ≥ 83)
+			coursework: [
+				{ name: "Software Construction & Design", mark: "94", grade: "HD", bucket: "SWE" },
+				{ name: "Introduction to Cybersecurity", mark: "89", grade: "HD", bucket: "CS / Security" },
+				{ name: "Cloud Computing", mark: "88", grade: "HD", bucket: "SWE / Systems" },
+				{ name: "Web Application Development", mark: "84", grade: "DI", bucket: "SWE" },
+				{ name: "Object-Oriented Programming", mark: "84", grade: "DI", bucket: "CS / SWE" },
+				{ name: "Parallel & Distributed Computing", mark: "83", grade: "DI", bucket: "CS / Systems" },
 			],
 		},
 		{
@@ -120,9 +140,56 @@ const INFO = {
 			company: "SP Jain School of Global Management",
 			location: "Sydney, Australia",
 			period: "Sep 2021 – May 2024",
-			highlights: [
-				"Coursework: Big Data Analytics, Machine Learning, Deep Learning, Database Management Systems",
+			transcript: "/AndyDoan_Bachelor_Transcript.pdf",
+			// Key coursework relevant to software engineering, CS & math (A− or higher)
+			coursework: [
+				{ name: "Intro to Computer Programming", grade: "A+", bucket: "CS / SWE" },
+				{ name: "Mathematics for Data Scientists", grade: "A+", bucket: "Math" },
+				{ name: "Calculus", grade: "A", bucket: "Math" },
+				{ name: "Advanced Calculus", grade: "A", bucket: "Math" },
+				{ name: "Linear Algebra", grade: "A−", bucket: "Math" },
+				{ name: "Data Mining", grade: "A−", bucket: "CS / ML" },
 			],
+		},
+	],
+
+	// A short story told through milestones (shown on the home page)
+	achievements: [
+		{
+			year: "2018",
+			short: "TechKids Hackathon",
+			tagline: "Where it all started",
+			title: "Where it all started",
+			event: "First Prize · TechKids Hackathon",
+			image: "/techkid_hackathon_cert.jpeg",
+			story: "This is where my journey began. As a teenager, I joined the TechKids Hackathon and built a little music website with my team, and we won First Prize. But the real prize was falling in love with programming. Seeing something I built come to life on the screen felt like magic, and I have been hooked ever since.",
+		},
+		{
+			year: "2022",
+			short: "SP Jain Hackathon",
+			tagline: "Building the fundamentals",
+			title: "Getting serious about the fundamentals",
+			event: "Champion · SP Jain Coding Hackathon",
+			image: "/spajn_dsa_hackathon.jpeg",
+			story: "At university, I wanted to become a stronger programmer, so I spent a lot of time practising data structures, algorithms, and problem solving. It paid off when I won the SP Jain Coding Hackathon. It was a small win, but a proud moment that told me the hard work was worth it.",
+		},
+		{
+			year: "2024",
+			short: "VPBank Hackathon",
+			tagline: "Solving real problems",
+			title: "Building things that solve real problems",
+			event: "Top 18/132 Finalist · VPBank Technology Hackathon",
+			image: "/vpbank_hackathon.png",
+			story: "After a while, I wanted to do more than solve puzzles. I wanted to build things that actually help people. At the VPBank Technology Hackathon, my team reached the Prototype Development Round, among the top 18 of 132 teams. It was my first real taste of turning an idea into a working product, and I loved every bit of it.",
+		},
+		{
+			year: "2025",
+			short: "NASA Space Apps",
+			tagline: "Building for impact",
+			title: "Building for the people around me",
+			event: "Sydney Local Winner & Global Nominee · NASA Space Apps Challenge",
+			image: "/astrothumbnail.jpeg",
+			story: "This one means the most to me. I wanted to build something that could genuinely help the people around me. With Team AstroDreamers, we created an air quality platform that lets anyone check the pollution level in their area and stay safe. We were named a Sydney Local Winner and a Global Nominee at the 2025 NASA Space Apps Challenge, and knowing it could make a real difference in people’s lives is the best feeling of all.",
 		},
 	],
 
