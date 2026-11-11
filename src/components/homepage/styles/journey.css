@@ -1,0 +1,336 @@
+/* Home "My Story" — horizontal timeline + slide-in story panel */
+.journey {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.journey-head {
+	max-width: 760px;
+}
+
+.journey-title {
+	width: 100%;
+	font-size: 30px;
+	letter-spacing: -0.02em;
+}
+
+.journey-subtitle {
+	width: 100%;
+	margin-top: 6px;
+	color: var(--secondary-color);
+}
+
+/* ---- Horizontal timeline ---- */
+.journey-track {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	margin-top: 40px;
+}
+
+.journey-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 66px;
+	height: 2px;
+	background: linear-gradient(90deg, rgba(39, 41, 109, 0.08), rgba(39, 41, 109, 0.32) 15%, rgba(39, 41, 109, 0.32) 85%, rgba(39, 41, 109, 0.08));
+	z-index: 0;
+}
+
+/* fixed-height top slot keeps every dot on the line, regardless of tagline length */
+.jn-node-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 52px;
+	gap: 1px;
+}
+
+.jn-node-tagline {
+	font-family: "Caveat", cursive;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 1.05;
+	color: var(--primary-color);
+	transition: color 180ms ease;
+}
+
+.jn-node.is-active .jn-node-tagline {
+	color: var(--link-color);
+}
+
+.jn-node {
+	position: relative;
+	flex: 1 1 0;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.jn-node-year {
+	line-height: 1;
+	font-family: "Caveat", cursive;
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--secondary-color);
+	opacity: 0.75;
+	transition: color 180ms ease, opacity 180ms ease;
+}
+
+.jn-dot {
+	margin-top: 8px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #fff;
+	border: 2px solid rgba(39, 41, 109, 0.35);
+	box-shadow: 0 0 0 4px #fff;
+	z-index: 2;
+	transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.jn-node-label {
+	margin-top: 12px;
+	padding: 7px 14px;
+	max-width: 100%;
+	border-radius: 999px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 8px 20px rgba(20, 20, 43, 0.06);
+	font-size: 13.5px;
+	font-weight: 700;
+	color: var(--primary-color);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.jn-node:hover .jn-node-label {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 28px rgba(20, 20, 43, 0.1);
+	border-color: rgba(39, 41, 109, 0.2);
+}
+
+.jn-node.is-active .jn-node-year {
+	opacity: 1;
+	color: var(--link-color);
+}
+
+.jn-node.is-active .jn-dot {
+	background: var(--link-color);
+	border-color: var(--link-color);
+	transform: scale(1.15);
+}
+
+.jn-node.is-active .jn-node-label {
+	border-color: var(--link-color);
+	box-shadow: 0 14px 30px rgba(39, 41, 109, 0.16);
+}
+
+/* ---- Story panel ---- */
+.jn-panel {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 30px;
+	align-items: center;
+	margin-top: 30px;
+	padding: 22px;
+	border-radius: 22px;
+	background: linear-gradient(180deg, rgba(39, 41, 109, 0.05), rgba(255, 255, 255, 0.98));
+	border: 1px solid rgba(39, 41, 109, 0.12);
+	box-shadow: 0 20px 50px rgba(20, 20, 43, 0.08);
+	/* PowerPoint-style slide-in: element re-mounts (key) each selection */
+	animation: jn-slide 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes jn-slide {
+	from {
+		opacity: 0;
+		transform: translateX(48px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.jn-panel {
+		animation: jn-fade 300ms ease both;
+	}
+	@keyframes jn-fade {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+}
+
+.jn-media {
+	border-radius: 16px;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 14px 34px rgba(20, 20, 43, 0.12);
+}
+
+.jn-media img {
+	display: block;
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+}
+
+.jn-body {
+	min-width: 0;
+}
+
+.jn-year-badge {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	color: var(--link-color);
+	line-height: 1;
+}
+
+.jn-title-text {
+	margin: 6px 0 0;
+	font-size: 22px;
+	font-weight: 800;
+	color: var(--primary-color);
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+}
+
+.jn-badge {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: rgba(39, 41, 109, 0.08);
+	color: var(--link-color);
+	font-size: 12.5px;
+	font-weight: 700;
+}
+
+.jn-story {
+	margin: 14px 0 0;
+	font-size: 15px;
+	line-height: 1.72;
+	color: var(--secondary-color);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 820px) {
+	.jn-panel {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.jn-node-label {
+		font-size: 12px;
+		padding: 6px 10px;
+	}
+
+	.jn-media img {
+		max-height: 240px;
+	}
+}
+
+@media (max-width: 600px) {
+	.journey-title {
+		font-size: 38px;
+	}
+
+	/* stack the timeline vertically on small screens */
+	.journey-track {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 6px;
+	}
+
+	.journey-line {
+		top: 12px;
+		bottom: 12px;
+		left: 22px;
+		right: auto;
+		width: 2px;
+		height: auto;
+	}
+
+	.jn-node {
+		flex-direction: row;
+		align-items: center;
+		gap: 14px;
+		padding: 8px 0;
+	}
+
+	.jn-node-top {
+		order: 2;
+		height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.jn-dot {
+		order: 1;
+		margin-top: 0;
+	}
+
+	.jn-node-label {
+		order: 3;
+		margin-top: 0;
+		margin-left: auto;
+	}
+
+	.jn-story {
+		font-size: 14.5px;
+	}
+}
+
+/* ---- CTA row under the story ---- */
+.home-cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 44px;
+}
+
+.home-cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 20px;
+	border-radius: 999px;
+	font-size: 14.5px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.home-cta-primary {
+	background: var(--link-color);
+	color: #fff;
+	box-shadow: 0 10px 24px rgba(39, 41, 109, 0.22);
+}
+
+.home-cta-secondary {
+	background: rgba(39, 41, 109, 0.07);
+	color: var(--link-color);
+	border: 1px solid rgba(39, 41, 109, 0.14);
+}
+
+.home-cta:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 16px 32px rgba(39, 41, 109, 0.2);
+}

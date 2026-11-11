@@ -23,10 +23,12 @@
 
 .about-main {
 	display: flex;
+	gap: 40px;
 }
 
 .about-right-side {
 	flex-basis: 900px;
+	min-width: 0; /* allow the skill-cards grid to shrink/wrap instead of overlapping the photo */
 }
 
 .about-title {

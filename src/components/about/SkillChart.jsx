@@ -20,6 +20,7 @@ import {
 	SiTypescript,
 	SiExpress,
 	SiFastapi,
+	SiGo,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandMysql } from "react-icons/tb";
@@ -39,6 +40,7 @@ const SkillChart = ({ data, title, color }) => {
 		Tailwind: RiTailwindCssFill,
 		"React.js": GrReactjs,
 		SpringBoot: SiSpringboot,
+		Go: SiGo,
 		ExpressJs: SiExpress,
 		FastAPI: SiFastapi,
 		"HTML/CSS": FaHtml5,

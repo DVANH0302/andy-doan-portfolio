@@ -10,16 +10,15 @@ import {
 	faMedium,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { Link } from "react-router-dom";
+
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
-import HomepageProjects from "../components/projects/homepageProjects";
+import Journey from "../components/homepage/journey";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
 
@@ -97,10 +96,6 @@ const Homepage = () => {
 
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
-								</div>
-
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.techstack}
 								</div>
 								{/* View Resume Button */}
 								<div
@@ -198,32 +193,18 @@ const Homepage = () => {
 							</a>
 						</div>
 
-						<div className="homepage-projects">
-							{/* Old project display for homepage */}
-							<HomepageProjects />
-						</div>
+						<Journey />
 
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={article().link}
-										/>
-									</div>
-								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
-							</div>
+						<div className="home-cta-row">
+							<Link to="/experience" className="home-cta home-cta-primary">
+								See my work &amp; education →
+							</Link>
+							<Link to="/projects" className="home-cta home-cta-secondary">
+								Projects
+							</Link>
+							<Link to="/skill" className="home-cta home-cta-secondary">
+								Skills
+							</Link>
 						</div>
 
 						<div className="page-footer">

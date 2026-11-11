@@ -8,7 +8,7 @@ import Socials from "../components/about/socials";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import SkillChart from "../components/about/SkillChart";
+import SkillCards from "../components/about/SkillCards";
 import "./styles/about.css";
 
 const Skill = () => {
@@ -49,50 +49,7 @@ const Skill = () => {
 									{INFO.about.description}
 								</div>
 
-								<div
-									style={{
-										display: "flex",
-									}}
-								>
-									<SkillChart
-										data={INFO.about.skills.languange}
-										title="Language"
-										color="#27296d"
-									/>
-									<SkillChart
-										data={INFO.about.skills.frontend}
-										title="Frontend"
-										color="#cf7979"
-									/>
-								</div>
-								<div
-									style={{
-										display: "flex",
-										justifyContent: "center",
-									}}
-								>
-									<SkillChart
-										data={INFO.about.skills.backend}
-										title="Backend"
-										color="#f6e198"
-									/>
-								</div>
-								<div
-									style={{
-										display: "flex",
-									}}
-								>
-									<SkillChart
-										data={INFO.about.skills.database}
-										title="Database"
-										color="#ecffa3"
-									/>
-									<SkillChart
-										data={INFO.about.skills.devops}
-										title="Cloud & DevOps"
-										color="#ff6f3c"
-									/>
-								</div>
+								<SkillCards skills={INFO.about.skills} />
 							</div>
 
 							<div className="about-left-side">
