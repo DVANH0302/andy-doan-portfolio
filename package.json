@@ -33,9 +33,9 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"notes:install": "npm install --prefix notes",
-		"notes:start": "npm start --prefix notes -- --port 3001",
-		"build:all": "react-scripts build && npm run build --prefix notes && node scripts/copy-notes.js",
+		"blogs:install": "npm install --prefix blogs",
+		"blogs:start": "npm start --prefix blogs -- --port 3001",
+		"build:all": "react-scripts build && npm run build --prefix blogs && node scripts/copy-blogs.js",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},

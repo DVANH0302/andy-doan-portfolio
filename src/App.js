@@ -5,7 +5,6 @@ import ReactGA from "react-ga4";
 import Homepage from "./pages/homepage";
 import Skill from "./pages/skill";
 import Projects from "./pages/projects";
-import Contact from "./pages/contact";
 import Notfound from "./pages/404";
 import Experience from "./pages/experience";
 
@@ -52,14 +51,6 @@ function App() {
 					element={
 						<PageTransition>
 							<Experience />
-						</PageTransition>
-					}
-				/>
-				<Route
-					path="/contact"
-					element={
-						<PageTransition>
-							<Contact />
 						</PageTransition>
 					}
 				/>

@@ -24,7 +24,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# notes (Docusaurus)
-/notes/node_modules
-/notes/build
-/notes/.docusaurus
+# blogs (Docusaurus)
+/blogs/node_modules
+/blogs/build
+/blogs/.docusaurus

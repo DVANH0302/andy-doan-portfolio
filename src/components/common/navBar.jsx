@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
 
-const NOTES_URL = process.env.REACT_APP_NOTES_URL || "/notes/";
+const BLOGS_URL = process.env.REACT_APP_BLOGS_URL || "/blogs/";
 
 const NavBar = (props) => {
 	const { active } = props;
@@ -51,17 +51,8 @@ const NavBar = (props) => {
 								<Link to="/skill">Skill</Link>
 							</li>
 
-							<li
-								className={
-									active === "contact"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/contact">Contact</Link>
-							</li>
 							<li className="nav-item">
-								<a href={NOTES_URL}>Notes</a>
+								<a href={BLOGS_URL}>Blogs</a>
 							</li>
 						</ul>
 					</div>

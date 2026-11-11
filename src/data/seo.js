@@ -63,18 +63,6 @@ const SEO = [
 		],
 	},
 
-	{
-		page: "contact",
-		description:
-			"Get in touch to collaborate on web development projects, internships, or open-source contributions. I'm always open to exciting opportunities.",
-		keywords: [
-			"Contact",
-			"Anh Viet Doan",
-			"Full-Stack Developer",
-			"Collaboration",
-			"Portfolio",
-		],
-	},
 ];
 
 export default SEO;

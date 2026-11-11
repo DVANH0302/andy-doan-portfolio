@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Andy's Notes",
+  title: "Andy's Blogs",
   tagline: 'DSA, ML, System Design and Research',
   favicon: 'img/favicon.ico',
 
@@ -11,9 +11,9 @@ const config = {
     v4: true,
   },
 
-  // Served under /notes/ of the portfolio. Override with env vars if hosted elsewhere.
-  url: process.env.NOTES_SITE_URL || 'http://localhost:3000',
-  baseUrl: process.env.NOTES_BASE_URL || '/notes/',
+  // Served under /blogs/ of the portfolio. Override with env vars if hosted elsewhere.
+  url: process.env.BLOGS_SITE_URL || 'http://localhost:3000',
+  baseUrl: process.env.BLOGS_BASE_URL || '/blogs/',
 
   onBrokenLinks: 'throw',
 
@@ -46,7 +46,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Andy's Notes",
+        title: "Andy's Blogs",
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
